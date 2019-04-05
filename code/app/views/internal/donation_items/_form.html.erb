@@ -1,0 +1,36 @@
+<%= form_with(model: [:internal, @donation_item]) do |f| %>
+  <div class="input-group">
+    <%= f.label :instrument, 'Instrument:' %>
+    <%= f.text_field :instrument, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.label :condition, 'Condition:' %>
+    <%= f.text_field :condition, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.label :quantity, 'Quantity:' %>
+    <%= f.text_field :quantity, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.label :location, 'Location:' %>
+    <%= f.text_field :location, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.label :name, 'Name:' %>
+    <%= f.text_field :name, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="input-group">
+    <%= f.label :email, 'Email:' %>
+    <%= f.text_field :email, class: 'textbox textbox--wide' %>
+  </div>
+
+  <div class="hbox">
+    <%= link_to 'Cancel', internal_donation_items_path, class: 'button button--spaced' %>
+    <%= f.submit 'Save', class: 'button button--spaced' %>
+  </div>
+<% end %>

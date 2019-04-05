@@ -1,0 +1,29 @@
+<% content_for(:title, 'Wishlist Items') %>
+
+<h1>WISHLIST</h1>
+
+<table class="push-down">
+  <tr>
+    <th>Instrument</th>
+    <th>Quantity</th>
+    <th>Date Required</th>
+    <th>Importance</th>
+  </tr>
+
+  <% @wishlist_items.each do |wishlist_item| %>
+    <tr>
+      <td><%= wishlist_item.instrument %></td>
+      <td><%= wishlist_item.quantity %></td>
+      <td><%= wishlist_item.date_required %></td>
+      <td><%= wishlist_item.importance %></td>
+      <td>
+        <%= link_to 'Edit', edit_internal_wishlist_item_path(wishlist_item), class: 'link link--underlined' %>, or
+        <%= link_to 'Delete', internal_wishlist_item_path(wishlist_item), class: 'link link--underlined', method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="hbox hbox--centering push-down">
+  <%= link_to 'Add to Wishlist', new_internal_wishlist_item_path, class: 'button button--spaced' %>
+</div>

@@ -1,0 +1,2 @@
+module Internal::AboutHelper
+end

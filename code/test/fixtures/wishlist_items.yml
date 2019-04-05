@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  instrument: MyString
+  quantity: 1
+  date_required: MyString
+  importance: MyString
+
+two:
+  instrument: MyString
+  quantity: 1
+  date_required: MyString
+  importance: MyString

@@ -10,19 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_032049) do
+ActiveRecord::Schema.define(version: 2019_04_04_172654) do
 
-  create_table "instruments", force: :cascade do |t|
-    t.string "name"
+  create_table "donation_items", force: :cascade do |t|
+    t.string "instrument"
+    t.string "condition"
+    t.integer "quantity"
     t.string "location"
-    t.string "donor"
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text "message"
+  create_table "wishlist_items", force: :cascade do |t|
+    t.string "instrument"
+    t.integer "quantity"
+    t.string "date_required"
+    t.string "importance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

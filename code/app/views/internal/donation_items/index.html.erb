@@ -1,0 +1,29 @@
+<% content_for(:title, 'Donation Items') %>
+
+<h1>DONATIONS</h1>
+
+<table class="push-down">
+  <tr>
+    <th>Instrument</th>
+    <th>Condition</th>
+    <th>Quantity</th>
+    <th>Location</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @donation_items.each do |donation_item| %>
+    <tr>
+      <td><%= donation_item.instrument %></td>
+      <td><%= donation_item.condition %></td>
+      <td><%= donation_item.quantity %></td>
+      <td><%= donation_item.location %></td>
+      <td><%= donation_item.name %></td>
+      <td>
+        <%= link_to 'Request', internal_donation_item_path(donation_item), class: 'link link--underlined' %>,
+        <%= link_to 'Edit', edit_internal_donation_item_path(donation_item), class: 'link link--underlined' %>, or
+        <%= link_to 'Delete', internal_donation_item_path(donation_item), class: 'link link--underlined', method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

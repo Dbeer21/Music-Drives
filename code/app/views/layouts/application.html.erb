@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Code</title>
+    <title>Music Drives</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <% if controller.class.parent == Internal %>
+      <div>
+        <%= image_tag ("logo.png"), size: "256x196" %>
+	<%= link_to 'HOME', internal_donation_items_index_path, class: 'link' %>
+	<%= link_to 'DONATE', internal_donation_items_new_path, class: 'link' %>
+	<%= link_to 'WISHLIST', internal_wishlist_items_index_path, class: 'link' %>
+	<%= link_to 'ABOUT', internal_about_index_path, class: 'link' %>
+        <%= yield %>
+      </div>
+    <% end %>
   </body>
 </html>
