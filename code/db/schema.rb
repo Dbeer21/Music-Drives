@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 2019_04_04_172654) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "instruments", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "donor"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "wishlist_items", force: :cascade do |t|
     t.string "instrument"
     t.integer "quantity"
