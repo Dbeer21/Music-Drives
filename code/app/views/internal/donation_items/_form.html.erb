@@ -6,12 +6,12 @@
 
   <div class="input-group">
     <%= f.label :condition, 'Condition:' %>
-    <%= f.text_field :condition, class: 'textbox textbox--wide' %>
+    <%= f.select :condition, [['New', 'New'], ['Barely Used', 'Barely Used'], ['Good', 'Good'], ['Rough', 'Rough'], ['Bad', 'Bad'], ['Damaged', 'Damaged']], class: 'textbox textbox--select' %>
   </div>
 
   <div class="input-group">
     <%= f.label :quantity, 'Quantity:' %>
-    <%= f.text_field :quantity, class: 'textbox textbox--wide' %>
+    <%= f.select :quantity, (0..999) %>
   </div>
 
   <div class="input-group">

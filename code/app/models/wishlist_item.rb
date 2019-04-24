@@ -1,11 +1,13 @@
 class WishlistItem < ApplicationRecord
+  require 'time'
 
   validates_presence_of :instrument, :quantity, :date_required, :importance
 
   before_validation do
     self.instrument = instrument.strip
     self.quantity = quantity
-    self.date_required = date_required.strip
+    date_obj = Time.strptime(date_required.strip, '%Y-%m-%d')
+    self.date_required = date_obj.mon.to_s + '/' + date_obj.day.to_s + '/' + date_obj.year.to_s 
     self.importance = importance.strip
   end
 

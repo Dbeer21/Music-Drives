@@ -1,2 +1,5 @@
-<h1>Internal::WishlistItems#edit</h1>
-<p>Find me in app/views/internal/wishlist_items/edit.html.erb</p>
+<% content_for(:title, 'Edit Wishlist') %>
+
+<h1> EDIT WISHLIST </h1>
+
+<%= render partial: "form", locals: {wishlist_item: @wishlist_item} %>

@@ -16,13 +16,33 @@ class Internal::DonationItemsController < ApplicationController
     @donation_item = DonationItem.new(permitted_params)
 
     if @donation_item.save
-      redirect_to internal_donation_items_path(), notice: 'The donation was successfully listed.'
+      redirect_to internal_donation_items_path, notice: 'The donation was successfully listed.'
     else
       render :new
     end
   end
 
   def edit
+  end
+
+  def update
+    @donation_item = DonationItem.find(params[:id])
+
+    if @donation_item.update(permitted_params)
+      redirect_to internal_donation_items_path, notice: 'The donation was successfully updated.'
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @donation_item = DonationItem.find(params[:id])
+    @donation_item.destroy
+    redirect_to internal_donation_items_path, notice: 'The donation was successfully deleted.'
+  end
+
+  def initialize_donation_item
+    @donation_item = DonationItem.find(params[:id])
   end
 
   def permitted_params

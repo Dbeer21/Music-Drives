@@ -6,21 +6,21 @@
 
   <div class="input-group">
     <%= f.label :quantity, 'Quantity:' %>
-    <%= f.text_field :quantity, class: 'textbox textbox--wide' %>
+    <%= f.select :quantity, (0..999) %>
   </div>
 
   <div class="input-group">
     <%= f.label :date_required, 'Date Needed By:' %>
-    <%= f.text_field :date_required, class: 'textbox textbox--wide' %>
+    <%= f.date_field :date_required, class: 'textbox textbox--wide' %>
   </div>
 
   <div class="input-group">
     <%= f.label :importance, 'Importance:' %>
-    <%= f.text_field :importance, class: 'textbox textbox--wide' %>
+    <%= f.select :importance, [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low']], class: 'textbox textbox--select' %>
   </div>
 
   <div class="hbox">
-    <%= link_to 'Cancel', internal_donation_items_path, class: 'button button--spaced' %>
+    <%= link_to 'Cancel', internal_wishlist_items_path, class: 'button button--spaced' %>
     <%= f.submit 'Save', class: 'button button--spaced' %>
   </div>
 <% end %>

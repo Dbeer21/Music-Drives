@@ -1,2 +1,5 @@
-<h1>Internal::DonationItems#edit</h1>
-<p>Find me in app/views/internal/donation_items/edit.html.erb</p>
+<% content_for(:title, 'Edit Donation') %>
+
+<h1> EDIT DONATION </h1>
+
+<%= render partial: "form", locals: {donation_item: @donation_item} %>

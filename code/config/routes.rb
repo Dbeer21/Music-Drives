@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   namespace :internal do
     get 'about/index'
   end
