@@ -12,14 +12,14 @@
 
   <body>
     <% if controller.class.parent == Internal %>
-      <div>
+      <div class="navbar">
         <%= image_tag ("logo.png"), size: "256x196" %>
-	<%= link_to 'HOME', internal_donation_items_index_path, class: 'link' %>
-	<%= link_to 'DONATE', internal_donation_items_new_path, class: 'link' %>
-	<%= link_to 'WISHLIST', internal_wishlist_items_index_path, class: 'link' %>
-	<%= link_to 'ABOUT', internal_about_index_path, class: 'link' %>
-        <%= yield %>
+        <p><%= link_to 'HOME', internal_donation_items_index_path, class: 'link' %></p>
+	<p><%= link_to 'DONATE', internal_donation_items_new_path, class: 'link' %></p>
+	<p><%= link_to 'WISHLIST', internal_wishlist_items_index_path, class: 'link' %></p>
+	<p><%= link_to 'ABOUT', internal_about_index_path, class: 'link' %></p>
       </div>
+      <%= yield %>
     <% end %>
   </body>
 </html>

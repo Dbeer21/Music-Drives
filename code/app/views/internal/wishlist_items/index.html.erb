@@ -2,6 +2,22 @@
 
 <h1>WISHLIST</h1>
 
+<style>
+table, th, td {
+  border: 1px solid brown;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+}
+
+table {
+  margin:1em auto;
+  width: 100%;
+}
+</style>
+
 <table class="push-down">
   <tr>
     <th>Instrument</th>
@@ -25,6 +41,6 @@
   <% end %>
 </table>
 
-<div class="hbox hbox--centering push-down">
+<div style="padding-top: 10px; text-align:center" class="hbox hbox--centering push-down">
   <%= link_to 'Add to Wishlist', new_internal_wishlist_item_path, class: 'button button--spaced' %>
 </div>
