@@ -18,7 +18,7 @@ table {
 }
 </style>
 
-<table class="push-down">
+<table>
   <tr>
     <th>Instrument</th>
     <th>Condition</th>
@@ -36,9 +36,9 @@ table {
       <td><%= donation_item.location %></td>
       <td><%= donation_item.name %></td>
       <td>
-        <%= link_to 'Request', internal_donation_item_path(donation_item), class: 'link link--underlined' %>,
-        <%= link_to 'Edit', edit_internal_donation_item_path(donation_item), class: 'link link--underlined' %>, or
-        <%= link_to 'Delete', internal_donation_item_path(donation_item), class: 'link link--underlined', method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Request', internal_donation_item_path(donation_item) %>,
+        <%= link_to 'Edit', edit_internal_donation_item_path(donation_item) %>, or
+        <%= link_to 'Delete', internal_donation_item_path(donation_item), method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
   <% end %>

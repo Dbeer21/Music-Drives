@@ -10,6 +10,5 @@
 <p><b>Contact Information (Email Address):</b><br><%= mail_to @donation_item.email, nil, class: 'link link--underlined' %></p>
 
 <div class="hbox hbox--centering">
-  <%= link_to 'Back', internal_donation_items_path, class: 'button button--spaces' %>
-  <%= link_to 'Delete', internal_donation_item_path(@donation_item), class: 'link link--underlined', method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', internal_donation_items_path %>
 </div>

@@ -18,7 +18,7 @@ table {
 }
 </style>
 
-<table class="push-down">
+<table>
   <tr>
     <th>Instrument</th>
     <th>Quantity</th>
@@ -34,13 +34,13 @@ table {
       <td><%= wishlist_item.date_required %></td>
       <td><%= wishlist_item.importance %></td>
       <td>
-        <%= link_to 'Edit', edit_internal_wishlist_item_path(wishlist_item), class: 'link link--underlined' %>, or
-        <%= link_to 'Delete', internal_wishlist_item_path(wishlist_item), class: 'link link--underlined', method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_internal_wishlist_item_path(wishlist_item) %>, or
+        <%= link_to 'Delete', internal_wishlist_item_path(wishlist_item), method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
   <% end %>
 </table>
 
 <div style="padding-top: 10px; text-align:center" class="hbox hbox--centering push-down">
-  <%= link_to 'Add to Wishlist', new_internal_wishlist_item_path, class: 'button button--spaced' %>
+  <%= link_to 'Add to Wishlist', new_internal_wishlist_item_path %>
 </div>

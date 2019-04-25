@@ -1,26 +1,26 @@
 <%= form_with(model: [:internal, @wishlist_item]) do |f| %>
-  <div class="input-group">
+  <div>
     <%= f.label :instrument, 'Instrument:' %>
-    <%= f.text_field :instrument, class: 'textbox textbox--wide' %>
+    <%= f.text_field :instrument %>
   </div>
 
-  <div class="input-group">
+  <div>
     <%= f.label :quantity, 'Quantity:' %>
     <%= f.select :quantity, (0..999) %>
   </div>
 
-  <div class="input-group">
+  <div>
     <%= f.label :date_required, 'Date Needed By:' %>
-    <%= f.date_field :date_required, class: 'textbox textbox--wide' %>
+    <%= f.date_field :date_required %>
   </div>
 
-  <div class="input-group">
+  <div>
     <%= f.label :importance, 'Importance:' %>
-    <%= f.select :importance, [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low']], class: 'textbox textbox--select' %>
+    <%= f.select :importance, [['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low']] %>
   </div>
 
-  <div class="hbox">
-    <%= link_to 'Cancel', internal_wishlist_items_path, class: 'button button--spaced' %>
-    <%= f.submit 'Save', class: 'button button--spaced' %>
+  <div>
+    <%= link_to 'Cancel', internal_wishlist_items_path %>
+    <%= f.submit 'Save' %>
   </div>
 <% end %>
