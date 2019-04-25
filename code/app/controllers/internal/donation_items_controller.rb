@@ -7,6 +7,12 @@
 class Internal::DonationItemsController < ApplicationController
   before_action :initialize_donation_item, only: %i[edit show]
 
+  def show
+  end
+ 
+  def edit
+  end
+
   #------------------------------------------------------------------
   #
   # Function: index()
