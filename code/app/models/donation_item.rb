@@ -1,3 +1,9 @@
+# Project Name: Music Drives
+# Description: Users can donate instruments for Trenton schools to acquire
+# Filename: donation_item.rb
+# Description: This file contains the variables and requirements for donation items
+# Last modified on: 4/24/2019
+
 class DonationItem < ApplicationRecord
 
   # require the presence of the following variables
